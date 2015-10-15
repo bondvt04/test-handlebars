@@ -5,9 +5,14 @@
 
 <h1>Users</h1>
 
-<ul>
-    {{#each users}}
-        {{!> user user={name:"hello", email:"asdf"} }}
-        {{> user}}
-    {{/each}}
-</ul>
+
+{{~#if users}}
+    <ul>
+        {{#each users}}
+            {{!> user user={name:"hello", email:"asdf"} }}
+            {{> user}}
+        {{/each}}
+    </ul>
+{{~^~}}
+    Results: 0
+{{/if}}

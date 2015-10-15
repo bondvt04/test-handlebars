@@ -4,6 +4,16 @@ var SiteControllerAbstract = require("../abstracts/SiteControllerAbstract");
 
 class UsersController { //extends SiteControllerAbstract {
     indexAction(req, res, next) {
+        var filters = {
+            name: req.params.filter_name
+        };
+
+        //if() {filters.name=}
+
+        req.params.filters || req.query.filters || {};
+
+        console.log(filters);
+
         res.render("screens/users/index", {
             title: "Site / users screen",
             users: this._getUsers()
