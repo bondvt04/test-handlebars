@@ -5,16 +5,9 @@ var SiteControllerAbstract = require("../abstracts/SiteControllerAbstract");
 class UsersController { //extends SiteControllerAbstract {
     indexAction(req, res, next) {
         res.render("screens/users/index", {
+            title: "Site / users screen",
             users: this._getUsers()
         });
-    }
-
-    asdf() {
-        this._asdf();
-    }
-
-    _asdf() {
-        console.log("asdf");
     }
 
     _getUsers(filters, orders) {
